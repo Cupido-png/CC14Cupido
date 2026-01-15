@@ -1,160 +1,146 @@
-/* General Reset */
+/* ===== Reset ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
+/* ===== Base ===== */
 body {
-    font-family: ''Georgia', serif'; 
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #2b2b2b;
     line-height: 1.6;
-    background-color: #f9f9f9; 
-    color: #333; 
     padding: 40px;
 }
 
-/* Header */
-h1 {
-    font-size: 2.8em;
-    margin-bottom: 10px;
-    color: #2a2a2a;
-    text-align: center;
-    font-weight: normal; 
+/* Center the resume */
+body > * {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h2 {
+/* ===== Header ===== */
+header {
     text-align: center;
-    font-size: 1.2em;
-    color: #555;
     margin-bottom: 30px;
-    line-height: 1.5; 
 }
 
-/* Navigation */
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 0.95rem;
+    color: #4a6fa5;
+}
+
+/* ===== Navigation ===== */
 nav {
-    text-align: center;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
+nav a {
     text-decoration: none;
-    font-size: 1.1em;
-    color: #333;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    color: #2b2b2b;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
 }
 
-nav ul li a:hover {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    border-bottom: 2px solid #000000; 
+nav a:hover {
+    border-bottom: 2px solid #4a6fa5;
 }
 
-/* Content Sections */
+/* ===== Sections ===== */
 section {
-    margin-bottom: 40px;
-}
-
-/* Section Titles */
-h3 {
-    font-size: 1.7em;
-    margin-bottom: 12px;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Summary */
-p {
-    font-size: 1.1em;
-    line-height: 1.8;
-    color: #444;
-    margin-bottom: 25px;
-}
-
-/* Experience, Skills, Projects Lists */
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-ul li {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    color: #444;
-    line-height: 1.6; 
-}
-
-/* Contact Section */
-section#contact p {
-    font-size: 1.1em;
-    color: #444;
-    margin-bottom: 18px;
-}
-
-section#contact a {
-    color: #0056b3; 
-    text-decoration: none;
-}
-
-section#contact a:hover {
-    text-decoration: underline;
-    color: #003366; 
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    font-size: 1em;
-    color: #888;
-    margin-top: 50px;
-}
-
-/* Horizontal Line */
-hr {
-    border: 1px solid #ddd;
     margin: 30px 0;
 }
 
+h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #4a6fa5;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
 
+h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
 
-/* Responsive Design for Smaller Screens */
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 2.2em;
+/* ===== Text & Lists ===== */
+p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+li ul {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+li ul li {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* ===== Links ===== */
+#contact a {
+    color: #4a6fa5;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Divider ===== */
+hr {
+    border: none;
+    border-top: 1px solid #dcdcdc;
+    margin: 30px 0;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 40px;
+}
+
+/* ===== Print ===== */
+@media print {
+    body {
+        background: none;
+        padding: 0;
     }
 
-    h2 {
-        font-size: 1.1em;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin-bottom: 15px;
-    }
-
-    section {
-        margin-bottom: 25px;
-    }
-
-    h3 {
-        font-size: 1.5em;
-    }
-
-    p {
-        font-size: 1em; 
+    nav,
+    footer {
+        display: none;
     }
 }

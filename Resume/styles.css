@@ -7,140 +7,257 @@
 
 /* ===== Base ===== */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f7f7f7;
-    color: #2b2b2b;
-    line-height: 1.6;
-    padding: 40px;
-}
-
-/* Center the resume */
-body > * {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ===== Header ===== */
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-header h1 {
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-}
-
-header p {
-    font-size: 0.95rem;
-    color: #4a6fa5;
+    font-family: "Georgia", serif;
+    background-color: #dde3cc; /* soft green */
+    color: #1f1f1f;
+    line-height: 1.7;
 }
 
 /* ===== Navigation ===== */
-nav {
-    margin: 20px 0;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-nav ul {
+.nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
-nav a {
+.nav a {
     text-decoration: none;
-    font-size: 0.9rem;
-    color: #2b2b2b;
-    padding-bottom: 2px;
-    border-bottom: 2px solid transparent;
+    color: inherit;
 }
 
-nav a:hover {
-    border-bottom: 2px solid #4a6fa5;
+/* ===== Hero ===== */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 60px 80px 120px;
+    align-items: center;
 }
 
-/* ===== Sections ===== */
-section {
-    margin: 30px 0;
+.hero-text {
+    max-width: 480px;
 }
 
-h3 {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #4a6fa5;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+.eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 20px;
 }
 
-h4 {
-    margin-top: 15px;
-    margin-bottom: 5px;
+.hero h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.hero p {
     font-size: 1rem;
+    margin-bottom: 40px;
 }
 
-/* ===== Text & Lists ===== */
-p {
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-}
-
-ul {
-    margin-left: 20px;
-}
-
-li {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-}
-
-li ul {
-    margin-top: 5px;
-    margin-left: 20px;
-}
-
-li ul li {
-    font-size: 0.9rem;
-    color: #444;
-}
-
-/* ===== Links ===== */
-#contact a {
-    color: #4a6fa5;
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #4c563f;
+    color: #fff;
     text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-#contact a:hover {
-    text-decoration: underline;
+/* Hero image */
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-/* ===== Divider ===== */
-hr {
-    border: none;
-    border-top: 1px solid #dcdcdc;
-    margin: 30px 0;
+/* ===== Gallery ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 80px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* ===== Footer ===== */
 footer {
     text-align: center;
-    font-size: 0.8rem;
-    color: #666;
-    margin-top: 40px;
+    padding: 60px 0;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
 }
 
-/* ===== Print ===== */
-@media print {
-    body {
-        background: none;
-        padding: 0;
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
     }
 
-    nav,
-    footer {
-        display: none;
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        padding: 30px;
     }
 }
+
+
+/* ===== Contact ===== */
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 120px 80px;
+    align-items: start;
+}
+
+.contact-text {
+    max-width: 420px;
+}
+
+.contact h1 {
+    font-size: 2.8rem;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.contact p {
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.contact-details p {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+/* ===== Form ===== */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-form label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #1f1f1f;
+    background: transparent;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    padding: 14px 32px;
+    background: #4c563f;
+    color: #fff;
+    border: none;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .contact {
+        grid-template-columns: 1fr;
+        padding: 80px 30px;
+    }
+}
+
+
+/* ===== About ===== */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 120px 80px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.about-text {
+    max-width: 480px;
+}
+
+.about-text h1 {
+    font-size: 2.6rem;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+.about-cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding-bottom: 4px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #2b2b2b;
+    border-bottom: 1px solid #2b2b2b;
+}
+
+/* ===== Active Nav ===== */
+.nav a.active {
+    border-bottom: 2px solid #4c563f;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .about {
+        grid-template-columns: 1fr;
+        padding: 80px 30px;
+    }
+
+    .about-image {
+        order: -1;
+    }
+}
+

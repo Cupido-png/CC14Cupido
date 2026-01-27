@@ -8,7 +8,7 @@
 /* ===== Base ===== */
 body {
     font-family: "Georgia", serif;
-    background-color: #dde3cc; /* soft green */
+    background-color: #dde3cc;
     color: #1f1f1f;
     line-height: 1.7;
 }
@@ -19,9 +19,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 40px 80px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+.logo {
+    letter-spacing: 2px;
 }
 
 .nav ul {
@@ -33,7 +37,16 @@ body {
 .nav a {
     text-decoration: none;
     color: inherit;
+    padding-bottom: 4px;
 }
+
+.nav a.active {
+    border-bottom: 2px solid #4c563f;
+}
+
+/* =========================
+   HOME
+========================= */
 
 /* ===== Hero ===== */
 .hero {
@@ -42,6 +55,7 @@ body {
     gap: 80px;
     padding: 60px 80px 120px;
     align-items: center;
+    margin-top: 40px;
 }
 
 .hero-text {
@@ -51,12 +65,14 @@ body {
 .eyebrow {
     font-size: 0.75rem;
     letter-spacing: 3px;
+    text-transform: uppercase;
     display: block;
     margin-bottom: 20px;
+    color: #4c563f;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.7rem;
     font-weight: normal;
     line-height: 1.2;
     margin-bottom: 30px;
@@ -78,7 +94,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Hero image */
+/* Hero Image */
 .hero-image img {
     width: 100%;
     height: auto;
@@ -99,31 +115,73 @@ body {
     object-fit: cover;
 }
 
-/* ===== Footer ===== */
-footer {
-    text-align: center;
-    padding: 60px 0;
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 120px 80px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.about-text {
+    max-width: 520px;
+}
+
+.about-text h1 {
+    font-size: 2.6rem;
+    font-weight: normal;
+    margin-bottom: 28px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    margin-bottom: 22px;
+}
+
+.about-meta {
+    margin-top: 40px;
+}
+
+.about-meta h2 {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #4c563f;
+}
+
+.about-meta p {
+    font-size: 0.95rem;
+    margin-bottom: 26px;
+    line-height: 1.6;
+}
+
+.about-cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding-bottom: 4px;
     font-size: 0.75rem;
     letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #2b2b2b;
+    border-bottom: 1px solid #2b2b2b;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
-    .hero {
-        grid-template-columns: 1fr;
-    }
+/* =========================
+   CONTACT (safe base)
+========================= */
 
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .nav {
-        padding: 30px;
-    }
-}
-
-
-/* ===== Contact ===== */
 .contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -193,64 +251,30 @@ footer {
     cursor: pointer;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
-    .contact {
-        grid-template-columns: 1fr;
-        padding: 80px 30px;
-    }
-}
-
-
-/* ===== About ===== */
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    padding: 120px 80px;
-    align-items: center;
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.about-text {
-    max-width: 480px;
-}
-
-.about-text h1 {
-    font-size: 2.6rem;
-    font-weight: normal;
-    margin-bottom: 30px;
-}
-
-.about-text p {
-    margin-bottom: 25px;
-    font-size: 1rem;
-}
-
-.about-cta {
-    display: inline-block;
-    margin-top: 20px;
-    padding-bottom: 4px;
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 60px 0;
     font-size: 0.75rem;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #2b2b2b;
-    border-bottom: 1px solid #2b2b2b;
-}
-
-/* ===== Active Nav ===== */
-.nav a.active {
-    border-bottom: 2px solid #4c563f;
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
+    .nav {
+        padding: 30px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 30px 100px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+    }
+
     .about {
         grid-template-columns: 1fr;
         padding: 80px 30px;
@@ -258,6 +282,11 @@ footer {
 
     .about-image {
         order: -1;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        padding: 80px 30px;
     }
 }
 

@@ -63,7 +63,7 @@ body {
 }
 
 .eyebrow {
-    font-size: 0.75rem;
+    font-size: 0.95rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     display: block;
@@ -96,7 +96,7 @@ body {
 
 /* Hero Image */
 .hero-image img {
-    width: 100%;
+    width: 90%;
     height: auto;
     object-fit: cover;
 }
@@ -110,7 +110,7 @@ body {
 }
 
 .gallery img {
-    width: 100%;
+    width: 90%;
     height: auto;
     object-fit: cover;
 }
@@ -128,7 +128,7 @@ body {
 }
 
 .about-image img {
-    width: 100%;
+    width: 90%;
     height: auto;
     object-fit: cover;
 }
@@ -179,7 +179,7 @@ body {
 }
 
 /* =========================
-   CONTACT (safe base)
+   CONTACT 
 ========================= */
 
 .contact {
@@ -195,7 +195,7 @@ body {
 }
 
 .contact h1 {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     font-weight: normal;
     margin-bottom: 30px;
 }
@@ -288,5 +288,44 @@ footer {
         grid-template-columns: 1fr;
         padding: 80px 30px;
     }
+
+    /* =========================
+       LIGHTBOX 
+       ========================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+
+.lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 300;
+}
+
 }
 

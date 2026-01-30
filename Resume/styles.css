@@ -43,6 +43,7 @@ body.lightbox-open {
 .logo {
     letter-spacing: 2px;
     font-family: "BackOut", sans-serif;
+    text-transform: lowercase;
 }
 
 /* nav links row */
@@ -341,6 +342,7 @@ body.lightbox-open {
     grid-row: 2;
     justify-self: start;
     font-size: 0.75rem;
+    text-transform: lowercase;
 }
 
 /* Socials — bottom CENTER */
